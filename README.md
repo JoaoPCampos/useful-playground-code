@@ -24,7 +24,6 @@ extension Date {
     func toString(withFormat format: DateFormatType) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         dateFormatter.dateFormat = format.rawValue
         return dateFormatter.string(from: self)
     }
