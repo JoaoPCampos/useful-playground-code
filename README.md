@@ -5,11 +5,14 @@ Help yourself by using some of these implementations in your code. Pretty simple
 ## Table of contents
 
 [#1 Date Extension](https://github.com/JoaoPCampos/useful-playground-code#1-date-extension)
+
 [#2 String Extension](https://github.com/JoaoPCampos/useful-playground-code#2-string-extension)
+
 [#3 NSMutableAttributedString Extension](https://github.com/JoaoPCampos/useful-playground-code#3-nsmutableattributedstring-extension)
+
 [#4 First Class Functions](https://github.com/JoaoPCampos/useful-playground-code#4-first-class-functions)
 
-## [#1 Date Extension]()
+## [#1 Date Extension](https://github.com/JoaoPCampos/useful-playground-code#1-date-extension)
 Convert date to string using specified format represented by the enum DateFormatType
 
 ```swift
@@ -31,7 +34,7 @@ return dateFormatter.string(from: self)
 print(Date().toString(withFormat: .ddMMyyy))
 ```
 
-## [#2 String Extension]
+## [#2 String Extension](https://github.com/JoaoPCampos/useful-playground-code#2-string-extension)
 Convert string to date, from a specific date format represented by the enum DateFormatType
 
 ```swift
@@ -54,7 +57,7 @@ print(date)
 }
 ```
 
-## [#3 NSMutableAttributedString Extension]
+## [#3 NSMutableAttributedString Extension](https://github.com/JoaoPCampos/useful-playground-code#3-nsmutableattributedstring-extension)
 Less painfull way to create an attributed string, add color and/or font to any substring too.
 
 ```swift
@@ -109,7 +112,7 @@ multiColors.add(attributes: [NSAttributedStringKey.foregroundColor: UIColor.gree
 multiColors.add(fontAttribute: UIFont.boldSystemFont(ofSize: 30), toSubString: "Bold") // Bold word is now bold and size 30
 ```
 
-## [#4 First Class Functions]
+## [#4 First Class Functions](https://github.com/JoaoPCampos/useful-playground-code#4-first-class-functions)
 Seems a good approach to try out soon...
 
 ```swift
