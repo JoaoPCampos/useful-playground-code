@@ -6,12 +6,10 @@ Help yourself by using some of these implementations in your code. Pretty simple
 
 [#1 Date Extension](https://github.com/JoaoPCampos/useful-playground-code#1-date-extension)
 [#2 String Extension](https://github.com/JoaoPCampos/useful-playground-code#2-string-extension)
-[#3 NSMutableAttributedString Extension](https://github.com/JoaoPCampos/useful-playground-code#3-NSMutableAttributedString-extension)
+[#3 NSMutableAttributedString Extension](https://github.com/JoaoPCampos/useful-playground-code#3-nsmutableattributedstring-extension)
 [#4 First Class Functions](https://github.com/JoaoPCampos/useful-playground-code#4-first-class-functions)
 
-
-
-## [#1 Date Extension]
+## [#1 Date Extension]()
 Convert date to string using specified format represented by the enum DateFormatType
 
 ```swift
