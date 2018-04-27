@@ -12,6 +12,8 @@ Help yourself by using some of these implementations in your code. Pretty simple
 
 [#4 First Class Functions](https://github.com/JoaoPCampos/useful-playground-code#4-first-class-functions)
 
+[#5 Optional Extension](https://github.com/JoaoPCampos/useful-playground-code#5-optional-extension)
+
 ## [#1 Date Extension](https://github.com/JoaoPCampos/useful-playground-code#1-date-extension)
 Convert date to string using specified format represented by the enum DateFormatType
 
@@ -159,4 +161,34 @@ let styles = (UIFont.systemFont(ofSize: 20), UIColor.red)
 let headerView = call(HeaderView.init, with: styles)
 let promotionView = call(PromotionView.init, with: styles)
 let profileView = call(ProfileView.init, with: styles)
+```
+## [#5 Optional Extension](https://github.com/JoaoPCampos/useful-playground-code#5-optional-extension)
+Call a desired function with the unwrapped optional value, or fallback to a given closure when optional is nil
+
+```swift
+extension Optional {
+    func calledBy(_ callback: (Wrapped) -> Void, orFallsbackTo fallBack: (() -> Void)? = nil) {
+        guard let unwrapped = self else {
+            fallBack?()
+            return
+        }
+        callback(unwrapped)
+    }
+}
+
+func callee(str: String) {
+    print(str.uppercased())
+}
+
+
+//testing
+var myOptional: String?
+
+let fallBack: () -> Void = { print("myOptional is nil") }
+
+myOptional.calledBy(callee) //does nothing
+myOptional.calledBy(callee, orFallsbackTo: fallBack) //calls fallBack
+
+myOptional = "\nstring to uppercase"
+myOptional.calledBy(callee) //calls callee
 ```
