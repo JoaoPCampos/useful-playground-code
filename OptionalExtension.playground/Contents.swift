@@ -2,21 +2,26 @@
 import UIKit
 
 extension Optional {
+    
     func calledBy(_ callback: (Wrapped) -> Void, orFallsbackTo fallBack: (() -> Void)? = nil) {
+        
         guard let unwrapped = self else {
+            
             fallBack?()
             return
         }
+        
         callback(unwrapped)
     }
 }
 
 func callee(str: String) {
+    
     print(str.uppercased())
 }
 
 
-//testing
+//testing 2
 var myOptional: String?
 
 let fallBack: () -> Void = { print("myOptional is nil") }
